@@ -1,0 +1,9 @@
+{
+   "data": {
+      "translations": [
+         {
+            "translatedText": "\u0993\u09b9\u09c7 \u09ac\u09bf\u09b6\u09cd\u09ac!"
+         }
+      ]
+   }
+}
