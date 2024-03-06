@@ -1,11 +1,15 @@
+from ast import parse
 from uu import encode
 import requests
 import json
 
+#open a file for outputting
+file1 = open('json_output.txt', 'w+')
+
 #method for displaying
 def jprint(obj):
-    text = json.dumps(obj, sort_keys=True, indent=1)
-    print(text)
+    text = json.dumps(obj, sort_keys=True, indent=4)
+    file1.writelines(text)
 
 #the url for api
 url = "https://google-translate1.p.rapidapi.com/language/translate/v2"
@@ -13,8 +17,8 @@ url = "https://google-translate1.p.rapidapi.com/language/translate/v2"
 #what we want to translate
 #from what lang to what lang
 payload = {
-	"q": "Hello, world!",
-	"target": "bn",
+	"q": "Hello, how are you doing?",
+	"target": "zh",
 	"source": "en"
 }
 headers = {
@@ -27,12 +31,10 @@ headers = {
 #get the response
 response = requests.post(url, data=payload, headers=headers)
 
-##open a file for outputting
-file1 = open('json_output.txt', 'w')
-#file1.write(response.json())
-#print(response.json())
+
+data = str(response.json())
+parsed_json = json.load(data)
+print(parsed_json)
 
 
-#get only the translated things
-translated_text = response.json()['translations']
-jprint(translated_text)
+file1.close

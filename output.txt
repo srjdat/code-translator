@@ -1,1 +1,16 @@
-তোমাকে ছাড়া জীবন চলতে থাকে
+# Filename: while.py
+Number = 23
+Run = true
+When running:
+    Guess = Integer (Enter ('Enter a number:'))
+
+    If guess = = number:
+        Print out 'Congratulations, you guessed it.'
+        Run = False # This will end the loop statement
+    Assumptions < Numbers:
+        Print out 'Wrong, higher number.'
+    Otherwise:
+        print 'Wrong, lower number.'
+Otherwise:
+    print 'end of loop statement'
+Print 'End'
