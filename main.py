@@ -75,5 +75,6 @@ final_result = ai_fixing['result']
 #first part is to remove the 
 file2.write(final_result.replace("```python", "").replace("```", "").strip())
 
+#close the files
 file1.close
 file2.close
