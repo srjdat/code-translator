@@ -1,16 +1,16 @@
-# File name: while.py
 number = 23
-running = true
-When running:
-    guess = integer(input('Enter a number: '))
+running = True
 
-    If guess == number:
-        Print 'Congratulations, you guessed it right.'
-        run = false # This will cause the loop to end
-    if guess < number:
-        print 'Wrong, make the number bigger.'
-    elif:
-        print 'Wrong, make the number smaller.'
-elif:
-    Print 'end of loop statement'
-print 'end'
+while running:
+    guess = int(input('Enter a number: '))
+
+    if guess == number:
+        print('Congratulations, you guessed it right.')
+        running = False # This will cause the loop to end
+    elif guess < number:
+        print('Wrong, make the number bigger.')
+    else:
+        print('Wrong, make the number smaller.')
+else:
+    print('End of loop statement')
+print('End')
